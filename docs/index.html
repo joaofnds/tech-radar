@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.melhorenvio.com.br/images/favicon-32x32.png" />
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="http://zalando.github.io/tech-radar/release/radar-0.5.js"></script>
+  <script src="https://opensource.zalando.com/tech-radar/radar.js"></script>
 
   <link rel="stylesheet" href="radar.css" />
 </head>
@@ -38,7 +38,22 @@
         { name: "HOLD", color: "#efafa9" },
       ],
       print_layout: true,
-      entries: [],
+      entries: [
+        // {
+        //   label: "Your entry name",
+        //   quadrant: 3,          // 0, 1, 2, 3 (counting clockwise, starting from bottom right)
+        //   ring: 2,              // 0, 1, 2, 3 (starting from inside)
+        //   moved: -1             // -1 = moved out (triangle pointing down)
+        //                         //  0 = not moved (circle)
+        //                         //  1 = moved in  (triangle pointing up)
+        // },
+        {
+          label: "PHP",
+          quadrant: 0,
+          ring: 0,
+          moved: 0
+        }
+      ],
     });
   </script>
 
@@ -103,7 +118,7 @@
         <p>
           <em>
             BTW, if you would like to create your own Tech Radar &mdash;
-            <a href="https://www.zalando.com/">Zalando</a>
+            <a href="https://opensource.zalando.com/">Zalando</a>
             have
             <a href="https://github.com/zalando/tech-radar"> open sourced the code </a>
             to generate this visualization, and
